@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/testText"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="244dp"
+        android:text=""
+        android:translationY="200dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topNavigationView" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:background="#00704A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/coffeeTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coffee Time"
+            android:textAllCaps="false"
+            android:textColor="#00704A"
+            android:textStyle="bold|italic"
+            app:backgroundTint="#FFFFFF"
+            app:cornerRadius="5dp"
+            android:translationY="15dp"
+            android:translationX="150dp" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/download" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="75dp"
+            android:layout_height="match_parent"
+            android:translationX="320dp"
+            app:srcCompat="@drawable/download" />
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/topNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="#00704A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Starbucks Drink \nGenerator"
+            android:textColor="#FFFFFF"
+            android:textSize="26dp"
+            android:textStyle="bold"
+            android:translationX="120dp"
+            android:translationY="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="96dp"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/starbs_drinks" />
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <TextView
+        android:id="@+id/caffeineNeedsHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:text="Caffeine Needs"
+        android:textColor="#00704A"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topNavigationView" />
+
+    <Spinner
+        android:id="@+id/caffeineNeedsDropdown"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/caffeineNeedsHeading"
+        app:layout_constraintTop_toBottomOf="@+id/topNavigationView" />
+
+    <TextView
+        android:id="@+id/sugarRushHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:text="Sugar Rush \nDesire"
+        android:textColor="#00704A"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/caffeineNeedsHeading" />
+
+    <Spinner
+        android:id="@+id/sugarRushDropdown"
+        android:layout_width="202dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/caffeineNeedsDropdown" />
+
+    <TextView
+        android:id="@+id/drinkSizeHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="40dp"
+        android:text="Drink Size"
+        android:textColor="#00704A"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sugarRushHeading" />
+
+    <Spinner
+        android:id="@+id/drinkSizeDropdown"
+        android:layout_width="202dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sugarRushDropdown" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
